@@ -4,11 +4,16 @@ class nhansu extends CI_Controller {
 
 	public function __construct()
 	{
-		parent::__construct();
+        parent::__construct();
 	}
 
-	public function index()
+    public function index()
 	{
+        $this->load->view('login_view');
+    }
+    public function ns()
+	{
+       
         $this->load->model('nhansu_model');
         $ketqua = $this->nhansu_model->getAllData();
         $ketqua = array("mangketqua"=>$ketqua);
@@ -18,6 +23,7 @@ class nhansu extends CI_Controller {
 	
         
     }
+
     public function add_nhansu()
     {
         
@@ -90,8 +96,7 @@ class nhansu extends CI_Controller {
   public function getdata()
   {
      
-  }
-       
+  }    
 }
 
 /* End of file  */

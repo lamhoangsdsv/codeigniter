@@ -32,6 +32,7 @@ class nhansu_model extends CI_Model {
         $dulieu = $dulieu->result_array();
         return $dulieu; 
     }
+   
 }
 
 /* End of file  */
